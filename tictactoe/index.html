@@ -7,8 +7,43 @@
     </head>
     <body>
         <h3>Tic Tac Toe</h3>
-        <div>
-
+        <div id="gameSpace">
+            <div id="gameContainer">
+                <div class="tile leftSide" id="0"></div>
+                <div class="tile" id="1"></div>
+                <div class="tile" id="2"></div>
+                <div class="tile leftSide" id="3"></div>
+                <div class="tile" id="4"></div>
+                <div class="tile" id="5"></div>
+                <div class="tile leftBottom" id="6"></div>
+                <div class="tile bottom" id="7"></div>
+                <div class="tile bottom" id="8"></div>
+            </div>
+            <div id="detailsPanel">
+                <div id="displayScreen"></div>
+                <div class="playerCard activePlayer">
+                    <div id="player1">Player 1</div>
+                    <div>X</div>
+                </div>
+                <div class="playerCard">
+                    <div id="player2">Player 2</div>
+                    <div>O</div>
+                </div>
+            </div>
+        </div>
+        <div id="playerForm">
+            <div>
+                <label for="player1Name">Enter P1 name:</label>
+                <input type="text" id="player1Name" value="Player 1" placeholder="Player 1">
+            </div>
+            <div>
+                <label for="player2Name">Enter P2 name:</label>
+                <input type="text" id="player2Name" value= "Player 2" placeholder="Player 2">
+            </div>
+            <div>
+                <button type="submit" id="playerNameSubmit">Submit Names</button>
+                <button id="resetButton">Restart</button>
+            </div>
         </div>
         <script src="./javascript/script.js"></script>
     </body>

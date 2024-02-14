@@ -1,0 +1,94 @@
+* {
+    background-color: beige;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+/* Game space/container classes and ids */
+#gameSpace {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#gameContainer {
+    display: grid;
+    grid-template-rows: 50px 50px 50px;
+    grid-template-columns: 50px 50px 50px;
+}
+
+.tile {
+    border-style: solid solid none none;
+    border-color: tan;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftSide {
+    border-style: solid solid none solid;
+}
+
+.bottom {
+    border-style: solid solid solid none;
+}
+
+.leftBottom {
+    border-style: solid;
+}
+
+
+
+/* Details panel classes and ids */
+
+#detailsPanel,
+#playerForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5px;
+}
+
+#displayScreen {
+    background-color: rgb(3, 95, 72);
+    color: white;
+    width: 200px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playerCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.activePlayer {
+    color: brown;
+}
+
+
+/* Player form area classes and ids */
+
+input {
+    background-color: white;
+}
+
+button {
+    background-color: white;
+    font-size: 14px;
+}
