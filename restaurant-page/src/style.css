@@ -1,0 +1,60 @@
+body {
+    background-color:rgb(255, 236, 204);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    background-color: rgb(120, 96, 255);
+    color: white;
+    font-weight: 500;
+    border-radius: 20px;
+    border: none;
+    padding: 4px 8px;
+    font-size: 1.5em;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    padding: 2px 5px;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: min(20px, 2%) min(80px, 10%);
+}
+
+#content > * {
+    border: solid 2px;
+    border-color: rgb(255, 155, 34);
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px 5px;
+    background-color: rgb(255, 221, 179);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#content > * > * {
+    margin: 2px;
+}
+
+.menuCard > * {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+}
+
+.menuCard > * > * {
+    margin: 0 10px;
+    font-weight: 700;
+}
