@@ -69,7 +69,7 @@ function populateProject (container, projects, current) {
         btn.addEventListener('click', function() {
             for (let todo of project) {
                 if (todo.id == btn.value) {
-                    todo.markComplete()
+                    todo.completed = true;
                 }
             }
             populateProject(container, projects, current)
