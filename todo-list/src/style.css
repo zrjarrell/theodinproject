@@ -1,0 +1,52 @@
+body {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    margin: 0;
+}
+
+#projectPanel {
+    background-color: aquamarine;
+    flex-basis: min(20%, 200px);
+}
+
+#todoPanel {
+    flex-basis: min(80%, 800px);
+}
+
+.todoCard {
+    border: 2px blue solid;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.titleRow,
+.mainDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mainDiv {
+    flex-grow: 1;
+}
+
+.expandDiv {
+    display: none;
+    flex-direction: column;
+}
+
+.prioritized {
+    text-decoration: underline;
+    color: red;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
