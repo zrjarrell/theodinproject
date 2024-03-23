@@ -9,14 +9,6 @@ class todoItem {
         todoItem.todoCounter ++;
     }
 
-    changePriority(newPriority) {
-        this.priority = newPriority
-    }
-
-    markComplete() {
-        this.completed = true
-    }
-
     static todoCounter = 0;
 }
 
