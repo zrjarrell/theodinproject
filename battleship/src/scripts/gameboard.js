@@ -29,7 +29,7 @@ class Gameboard {
                         let x = utilities.getRandomBelow(10);
                         let ys = []
                         for (let y = startPos; y < startPos + length; y++) {
-                            if (this.grid[x][y].occupied) {
+                            if (this.grid[x][y].occupied || this.grid[x][y].neighborOccupied(this.grid)) {
                                 collides = true
                             }
                             ys.push(y)
@@ -45,7 +45,7 @@ class Gameboard {
                         let y = utilities.getRandomBelow(10);
                         let xs = []
                         for (let x = startPos; x < startPos + length; x++) {
-                            if (this.grid[x][y].occupied) {
+                            if (this.grid[x][y].occupied || this.grid[x][y].neighborOccupied(this.grid)) {
                                 collides = true
                             }
                             xs.push(x)
@@ -60,7 +60,7 @@ class Gameboard {
                     }
                 } else {
                     let y = utilities.getRandomBelow(10);
-                    if (this.grid[startPos][y].occupied) {
+                    if (this.grid[startPos][y].occupied || this.grid[startPos][y].neighborOccupied(this.grid)) {
                         collides = true
                     } else {
                         let newShip = new Ship(length);
@@ -83,6 +83,20 @@ class GridCell {
         this.y = y;
         this.occupied = false;
         this.targeted = false;
+    }
+
+    neighborOccupied(grid) {
+        let neighborOccupied = false;
+        let neighbors = [{x: this.x - 1, y: this.y - 1}, {x: this.x - 1, y: this.y + 1},
+                        {x: this.x + 1, y: this.y - 1}, {x: this.x + 1, y: this.y + 1}];
+        for (let i in neighbors) {
+            if (neighbors[i].x >= 0 && neighbors[i].x <= 9 && neighbors[i].y >= 0 && neighbors[i].y <= 9) {
+                if (grid[neighbors[i].x][neighbors[i].y].occupied) {
+                    neighborOccupied = true;
+                }
+            }
+        }
+        return neighborOccupied;
     }
 
     makeOccupied(ship) {
