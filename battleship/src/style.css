@@ -1,0 +1,56 @@
+#gameBoardWindow {
+    display: flex;
+    flex-direction: row;
+}
+
+.boardWindow {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.board {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.boardColumn {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(62, 75, 216);
+    border: 1px solid black;
+}
+
+.occupiedCell {
+    background-color: darkgray;
+}
+
+.sunkCell {
+    background-color: maroon;
+}
+
+.hitCell {
+    background-color: darkorange;
+}
+
+.targetedCell {
+    background-color: lightblue;
+}
+
+#buttonPanel {
+    display: flex;
+}
+
+button {
+    border-radius: 10px;
+    background-color: limegreen;
+    margin: 20px;
+}
